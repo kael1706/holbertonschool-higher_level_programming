@@ -5,4 +5,4 @@ def uppercase(str):
         if code > 96 and code < 122:
             code = code - 32
         print("{:s}".format(chr(code)), end='')
-    print("{:s}".format('\n'))
+#    print("{:s}".format('\n'))
