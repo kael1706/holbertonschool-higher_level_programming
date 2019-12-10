@@ -7,4 +7,3 @@ def uppercase(str):
             print(chr(code) + "")
         else:
             print(letter + "")
-uppercase("holberton 98")
