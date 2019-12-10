@@ -3,9 +3,9 @@ import random
 number = random.randint(-10000, 10000)
 print("{:s}".format("Last digit of " + str(number)), end='')
 if number < 0:
-     fix = -1
+    fix = -1
 else:
-     fix = 1
+    fix = 1
 number = (abs(number) % 10) * fix
 print("{:s}".format(" is " + str(number) + " and is "), end='')
 if number > 5:
