@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for n in range(99):
-    print(str(n) + " = " + hex(n))
+    print("{:s}".format(str(n) + " = " + hex(n)))
