@@ -6,8 +6,8 @@ if number < 0:
      fix = -1
 else:
      fix = 1
-number = abs(number) % 10
-print(" is " + str(number * fix) + " and is ", end='')
+number = (abs(number) % 10) * fix
+print(" is " + str(number) + " and is ", end='')
 if number > 5:
     print("greater than 5")
 elif number is 0:
