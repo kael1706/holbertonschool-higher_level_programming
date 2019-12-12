@@ -6,6 +6,8 @@ if __name__ == '__main__':
 
     if not args:
         print("0 arguments.")
+    elif len(args) is 1:
+        print("1 argument:")
     else:
         print(str(len(args)) + " arguments:")
     for i, val in enumerate(args):
