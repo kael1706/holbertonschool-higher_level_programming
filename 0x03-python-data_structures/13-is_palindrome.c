@@ -9,8 +9,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *start = *head;
 	listint_t *end = *head;
-	unsigned int c1 = 0, l = 1;
-	unsigned int c2;
+	unsigned int c1 = 0, l = 1, c2;
 
 	if (head == NULL)
 		return (0);
