@@ -7,7 +7,6 @@ def divisible_by_2(my_list=[]):
                 bList.append(True)
             else:
                 bList.append(False)
-        print(bList)
         return bList
 """my_list = [0, 1, 2, 3, 4, 5, 6]
 list_result = divisible_by_2(my_list)
