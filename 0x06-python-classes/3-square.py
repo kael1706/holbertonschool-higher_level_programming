@@ -9,5 +9,5 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
     def area(self):
-        """retrun the area of square"""
+        """public instance method"""
         return self.__size ** 2
