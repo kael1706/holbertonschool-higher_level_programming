@@ -20,23 +20,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-    def area(self):
-        """public instance method"""
-        return self.__size ** 2
-
-    def my_print(self):
-        """print a square"""
-        for y in range(0, self.__position[1]):
-            print("")
-        for a in range(0, self.__size):
-            for x in range(0, self.__position[0]):
-                print(" ", end="")
-            for b in range(0, self.__size):
-                print("#", end="")
-            print("")
-        if (self.__size == 0):
-            print("")
-
     @property
     def position(self):
         """get the position"""
@@ -55,3 +38,20 @@ class Square:
         if value[0] < 0 or value[1] < 0:
             raise TypeError(e)
         self.__position = value
+
+    def area(self):
+        """public instance method"""
+        return self.__size ** 2
+
+    def my_print(self):
+        """print a square"""
+        for y in range(0, self.__position[1]):
+            print("")
+        for a in range(0, self.__size):
+            for x in range(0, self.__position[0]):
+                print(" ", end="")
+            for b in range(0, self.__size):
+                print("#", end="")
+            print("")
+        if (self.__size == 0):
+            print("")
