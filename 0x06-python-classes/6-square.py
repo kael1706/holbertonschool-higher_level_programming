@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """."""
+    """class square"""
     def __init__(self, size=0, position=(0, 0)):
         """start of class"""
         self.__size = size
