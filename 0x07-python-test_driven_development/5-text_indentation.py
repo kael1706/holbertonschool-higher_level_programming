@@ -19,7 +19,7 @@ def text_indentation(text):
     size = len(new_text)
     jump = False
     for idx, item in enumerate(new_text):
-        jump =False
+        jump = False
         new_text[idx] = item.strip()
         for ch in item:
             if ch in "?.:":
@@ -28,4 +28,3 @@ def text_indentation(text):
             print(new_text[idx], end="\n\n")
         else:
             print(new_text[idx], end="")
-#print("".join(new_text), end="")
