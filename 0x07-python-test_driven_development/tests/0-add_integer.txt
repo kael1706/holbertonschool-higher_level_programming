@@ -1,0 +1,42 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+int + int
+>>> add_integer(3, 3)
+6
+
+-int + -int
+>>> add_integer(-15, -5)
+-20
+
+float + float
+>>> add_integer(1.5, 1.5)
+2
+
+-floar + -float
+>>> add_integer(-2.5, -1.3)
+-3
+
+only one argument: int + 98
+>>> add_integer(2)
+100
+
+string + int
+>>> add_integer("k", 100)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+int + string
+>>> add_integer(100, "k")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+tuple + int
+>>> add_integer((17, 6), 1000)
+Traceback (most recent call last):
+TypeError: a must be an integer
