@@ -5,6 +5,7 @@ this module have the following functions:
 print_square: prints a square with the character
 """
 
+
 def print_square(size):
     if isinstance(size, int) is False and\
             isinstance(size, float) is False:
@@ -17,4 +18,3 @@ def print_square(size):
         for b in range(0, int(size)):
             print("#", end="")
         print("")
-
