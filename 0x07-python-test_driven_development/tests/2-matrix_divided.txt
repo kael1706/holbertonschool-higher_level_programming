@@ -1,0 +1,37 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+matrix is not list
+>>> matrix_divided(1, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix dont have a list inside
+>>> matrix_divided([3, 4], 5)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Values in the list of Matrix is not an integer
+>>> matrix_divided([[6, "k"], [7, 8]], 9)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Length of the list are not the same
+>>> matrix_divided([[10, 11, 12], [13, 14]], 15)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Denominator is not a number
+>>> matrix_divided([[16, 17], [18, 19]], "k")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Denominator is 0
+>>> matrix_divided([[20, 21, 22], [23, 24, 25]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
