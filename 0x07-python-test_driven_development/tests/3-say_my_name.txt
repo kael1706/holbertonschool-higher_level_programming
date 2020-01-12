@@ -1,0 +1,25 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+not string with string
+>>> say_my_name(1, "asdfsfsdfsdf")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+string with int
+>>> say_my_name("fjvkhukgvwn", 123)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+string without the other string
+>>> say_my_name("fkjnafkjkhfhkuf")
+My name is fkjnafkjkhfhkuf 
+
+string with string
+>>> say_my_name("dadjnadadjhduwqed", "newajjbajkbae")
+My name is dadjnadadjhduwqed newajjbajkbae
