@@ -35,3 +35,7 @@ Denominator is 0
 >>> matrix_divided([[20, 21, 22], [23, 24, 25]], 0)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
+
+void list
+>>> matrix_divided([], 2)
+[]
