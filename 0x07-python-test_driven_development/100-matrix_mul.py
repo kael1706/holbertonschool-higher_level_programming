@@ -52,7 +52,7 @@ def matrix_mul(m_a, m_b):
             if isinstance(c, (int, float)) is False:
                 raise TypeError("m_b should contain only integers or floats")
     if m_a_row_size is m_b_rows_count:
-        new_m = [] 
+        new_m = []
         for i in range(m_a_rows_count):
             new_m.append([0] * m_b_row_size)
         for ra in range(m_a_rows_count):
