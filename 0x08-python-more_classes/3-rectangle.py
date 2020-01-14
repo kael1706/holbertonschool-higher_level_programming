@@ -75,3 +75,6 @@ class Rectangle():
             rect_draw.append('\n')
         rect = "".join(rect_draw)
         return rect[:-1]
+    def __del__(self):
+        """Instance method called when an instance is deleted"""
+        print("Bye rectangle...")
