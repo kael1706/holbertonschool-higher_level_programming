@@ -7,6 +7,9 @@ print_square: prints a square with the character
 
 
 def print_square(size):
+    """
+        prints a square with the character
+    """
     if isinstance(size, int) is False and\
             isinstance(size, float) is False:
                 raise TypeError("size must be an integer")
