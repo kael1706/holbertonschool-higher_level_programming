@@ -1,8 +1,10 @@
 #!/usr/bin/bash
+
 """
 this is the module 4-print_square.
+
 this module have the following functions:
-print_square: prints a square with the character
+print_square: prints a square with the character.
 """
 
 
