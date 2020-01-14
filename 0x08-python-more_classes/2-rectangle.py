@@ -5,7 +5,7 @@ this is the class Rectangle.
 
 
 class Rectangle():
-    """."""
+    """class"""
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width

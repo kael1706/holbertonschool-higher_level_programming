@@ -5,11 +5,12 @@ this is the class Rectangle.
 
 
 class Rectangle():
-    """."""
+    """this is a class"""
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
+        type(self).number_of_instances += 1
     @property
     def width(self):
         """
@@ -81,7 +82,13 @@ class Rectangle():
         Instance method that prints an “official”
         string representation of an instance
         """
-        if Rectangle.number_of_instances > 0:
-            Rectangle.number_of_instances -= 1
         return "Rectangle(" + str(self.width) + ", " + \
             str(self.height) + ")"
+
+    def __del__(self):
+        """
+        Instance method called when an instance is deleted
+        """
+        if Rectangle.number_of_instances > 0:
+            Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
