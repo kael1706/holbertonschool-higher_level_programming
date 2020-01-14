@@ -7,6 +7,9 @@ matrix_mul(m_a, m_b): multiplies 2 matrices.
 
 
 def matrix_mul(m_a, m_b):
+    """
+    multiplies 2 matrices.
+    """
     if isinstance(m_a, list) is False:
         raise TypeError("m_a must be a list")
     if isinstance(m_b, list) is False:
