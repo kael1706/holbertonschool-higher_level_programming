@@ -1,0 +1,33 @@
+The ``1-rectangle`` module
+======================
+
+Using ``Rectangle``
+-------------------
+
+>>> Rectangle = __import__('1-rectangle').Rectangle
+
+test 1
+>>> my_rectangle = Rectangle(2, 4)
+>>> print(my_rectangle.__dict__)
+{'_Rectangle__height': 4, '_Rectangle__width': 2}
+
+test 2
+>>> my_rectangle.width = 10
+>>> my_rectangle.height = 3
+>>> print(my_rectangle.__dict__)
+{'_Rectangle__height': 3, '_Rectangle__width': 10}
+
+test 3
+>>> my_rectangle.width = "d"
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+test 3
+>>> my_rectangle.width = -1
+Traceback (most recent call last):
+ValueError: width must be >= 0
+
+test 4
+>>> my_rectangle2 = Rectangle("2", 4)
+Traceback (most recent call last):
+TypeError: width must be an integer
