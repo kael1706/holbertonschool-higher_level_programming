@@ -70,3 +70,10 @@ with nan
 >>> bg.integer_validator("nonumber", float('nan'))
 Traceback (most recent call last):
 TypeError: nonumber must be an integer
+
+with infinity
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("infin", float('inf'))
+Traceback (most recent call last):
+TypeError: infin must be an integer
+
