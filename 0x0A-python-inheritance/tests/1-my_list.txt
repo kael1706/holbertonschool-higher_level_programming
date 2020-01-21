@@ -44,3 +44,7 @@ only one int element
 >>> l.append(2)
 >>> l.print_sorted()
 [2]
+
+check if is subclcass
+>>> issubclass(MyList, list)
+True

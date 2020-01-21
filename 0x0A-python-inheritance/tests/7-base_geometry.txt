@@ -1,7 +1,7 @@
 The ``BaseGeometry`` module
 ======================
 
-Using ``area``
+Using ``BaseGeometry``
 -------------------
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
@@ -21,3 +21,46 @@ detect invalid value negative integer
 >>> bg.integer_validator("my_int", -17)
 Traceback (most recent call last):
 ValueError: my_int must be greater than 0
+
+Type test
+>>> bg = BaseGeometry()
+>>> def t1(cases=[]):
+... 	for case in cases:
+...			try:
+...				bg.integer_validator("name", case)
+...			except Exception as e:
+...				print("[{}] {} for type {}".format(e.__class__.__name__, e, type(case)))
+>>> cases = [1.17, -17.17, True, "hello world", [6, 17], ("17", 6), {"k":17}, t1, BaseGeometry, None, bg, set()]
+>>> t1(cases)
+[TypeError] name must be an integer for type <class 'float'>
+[TypeError] name must be an integer for type <class 'float'>
+[TypeError] name must be an integer for type <class 'bool'>
+[TypeError] name must be an integer for type <class 'str'>
+[TypeError] name must be an integer for type <class 'list'>
+[TypeError] name must be an integer for type <class 'tuple'>
+[TypeError] name must be an integer for type <class 'dict'>
+[TypeError] name must be an integer for type <class 'function'>
+[TypeError] name must be an integer for type <class 'type'>
+[TypeError] name must be an integer for type <class 'NoneType'>
+[TypeError] name must be an integer for type <class '7-base_geometry.BaseGeometry'>
+[TypeError] name must be an integer for type <class 'set'>
+
+one int args
+>>> bg.integer_validator(17)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+three int args
+>>> bg.integer_validator(17, 6, 95)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+zero args
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+zero args
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
