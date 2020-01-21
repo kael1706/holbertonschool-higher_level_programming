@@ -77,3 +77,8 @@ with infinity
 Traceback (most recent call last):
 TypeError: infin must be an integer
 
+only zero
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+ValueError: my_int must be greater than 0
