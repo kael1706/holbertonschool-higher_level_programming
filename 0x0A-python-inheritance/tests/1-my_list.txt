@@ -48,3 +48,7 @@ only one int element
 check if is subclcass
 >>> issubclass(MyList, list)
 True
+
+>>> l = MyList(float('nan'))
+Traceback (most recent call last):
+TypeError: 'float' object is not iterable
