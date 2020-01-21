@@ -69,3 +69,8 @@ other1
 >>> l.append(5)
 >>> l.print_sorted()
 [1, 2, 3, 4, 5]
+
+other2
+>>> float_list = MyList(3.5)
+Traceback (most recent call last):
+TypeError: 'float' object is not iterable
