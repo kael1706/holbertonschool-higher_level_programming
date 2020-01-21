@@ -36,8 +36,10 @@ only zero
 >>> l.append(0)
 >>> l.append(0)
 >>> l.append(0)
+>>> l.append(0)
+>>> l.append(0)
 >>> l.print_sorted()
-[0, 0, 0]
+[0, 0, 0, 0, 0]
 
 only one int element
 >>> l = MyList()
@@ -71,6 +73,6 @@ other1
 [1, 2, 3, 4, 5]
 
 other2
->>> float_list = MyList(3.5)
+>>> l = MyList(3.5)
 Traceback (most recent call last):
 TypeError: 'float' object is not iterable
