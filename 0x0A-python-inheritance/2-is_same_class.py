@@ -2,7 +2,7 @@
 """
 this is the module 1-is_same_class.
 this module have the following functions:
-is_same_class: 
+is_same_class:
 """
 
 
