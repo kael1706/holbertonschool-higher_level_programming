@@ -16,7 +16,7 @@ class Student():
             if hasattr(self, '__slots__'):
                 return self.__slots__
 
-        if attrs is not None and isinstance(attrs, list) == False:
+        if attrs is not None and isinstance(attrs, list) is False:
             if hasattr(self, '__dict__'):
                 return self.__dict__
             if hasattr(self, '__slots__'):
