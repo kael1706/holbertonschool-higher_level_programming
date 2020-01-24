@@ -36,8 +36,18 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """draw the object"""
         for r in range(self.__height):
             print('#' * self.__width)
+
+    def __str__(self):
+        """
+        Instance method that returns an “informal”
+        and nicely printable string representation
+        of an instance
+        """
+        return ('[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
+                self.__x, self.__y, self.__width, self.__height))
 
     @property
     def width(self):
