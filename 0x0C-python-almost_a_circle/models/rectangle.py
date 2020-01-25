@@ -49,14 +49,16 @@ class Rectangle(Base):
                 print('#', end='')
             print('')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Overwrite multiple attribute values."""
         if args:
             l = ['id', 'width', 'height', 'x', 'y']
-            print(l2)
             for idx, v in enumerate(args):
                 setattr(self, l[idx], v)
             return
+        for k in kwargs:
+            if hasattr(self, k):
+                setattr(self, k, kwargs[k])
 
     def __str__(self):
         """
