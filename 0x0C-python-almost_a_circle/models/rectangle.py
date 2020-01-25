@@ -73,6 +73,22 @@ class Rectangle(Base):
         return ('[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
 
+    def to_dictionary(self):
+        """return dict of the instance"""
+        d = self.__dict__
+        newd = {}
+        new_k = ''
+        if d:
+            print(d)
+            for k in d:
+                new_k = k
+                if k.startswith('_'):
+                    new_k = k[12:]
+                if k.endswith('width') or k.endswith('height'):
+                    new_k = 'size'
+                newd[new_k] = d[k]
+            return newd
+
     @property
     def width(self):
         """get width."""

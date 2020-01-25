@@ -35,6 +35,21 @@ class Square(Rectangle):
         return ('[Square] ({}) {}/{} - {}'.format(self.id,
                 self.x, self.y, self.width))
 
+    def update(self, *args, **kwargs):
+        """
+        Overwrite multiple attribute values.
+        indeterminate arguments by position
+        and name are used.
+        """
+        if args:
+            l = ['id', 'size', 'x', 'y']
+            for idx, v in enumerate(args):
+                setattr(self, l[idx], v)
+            return
+        for k in kwargs:
+            if hasattr(self, k):
+                setattr(self, k, kwargs[k])
+
     @property
     def size(self):
         """get size."""
