@@ -37,8 +37,26 @@ class Rectangle(Base):
 
     def display(self):
         """draw the object"""
-        for r in range(self.__height):
-            print('#' * self.__width)
+        if (self.area() == 0):
+            print('')
+            return
+        for axis_y in range(0, self.__y):
+            print('')
+        for h in range(0, self.__height):
+            for x in range(0, self.__x):
+                print(' ', end='')
+            for w in range(0, self.__width):
+                print('#', end='')
+            print('')
+
+    def update(self, *args):
+        """Overwrite multiple attribute values."""
+        if args:
+            l = ['id', 'width', 'height', 'x', 'y']
+            print(l2)
+            for idx, v in enumerate(args):
+                setattr(self, l[idx], v)
+            return
 
     def __str__(self):
         """
