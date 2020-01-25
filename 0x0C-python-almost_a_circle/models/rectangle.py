@@ -50,7 +50,11 @@ class Rectangle(Base):
             print('')
 
     def update(self, *args, **kwargs):
-        """Overwrite multiple attribute values."""
+        """
+        Overwrite multiple attribute values.
+        indeterminate arguments by position
+        and name are used.
+        """
         if args:
             l = ['id', 'width', 'height', 'x', 'y']
             for idx, v in enumerate(args):
