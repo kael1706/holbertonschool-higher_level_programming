@@ -84,8 +84,6 @@ class Rectangle(Base):
                 new_k = k
                 if k.startswith('_'):
                     new_k = k[12:]
-                if k.endswith('width') or k.endswith('height'):
-                    new_k = 'size'
                 newd[new_k] = d[k]
             return newd
 
