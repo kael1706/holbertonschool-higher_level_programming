@@ -5,6 +5,7 @@ this module has the followings classes:
 base.
 """
 import json
+import os
 
 
 class Base():
@@ -34,7 +35,7 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """save a obj as JSON string in json file"""
+        """save a obj as JSON string in json file."""
         l_o = []
         if not list_objs or list_objs is None:
             l_o = []
@@ -47,7 +48,7 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """Return dictionary list"""
+        """Return dictionary list."""
         if not json_string or json_string is None:
             return []
         if type(json_string) != str:
@@ -56,10 +57,23 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        """return a instance with all attributes already set"""
+        """return a instance with all attributes already set."""
         if cls.__name__ == 'Square':
             new_i = cls(1)
         else:
             new_i = cls(1, 1)
         new_i.update(**dictionary)
         return new_i
+
+    @classmethod
+    def load_from_file(cls):
+        """return a list of instances"""
+        f_name = cls.__name__ + '.json'
+        l_i = []
+        if not os.path.exists(f_name):
+            return []
+        with open(f_name, 'r', encoding='utf-8') as j_f:
+            l_d = cls.from_json_string(j_f.read())
+        for d in l_d:
+            l_i.append(cls.create(**d))
+        return l_i
