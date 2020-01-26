@@ -31,3 +31,16 @@ class Base():
             if isinstance(item, dict) == False:
                 raise TypeError(e_msj)
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """save a obj as JSON string in json file"""
+        l_o = []
+        if not list_objs or list_objs is None:
+            l_o = []
+        else:
+            for obj in list_objs:
+                l_o.append(obj.to_dictionary())
+        with open(cls.__name__ + '.json', 'w+', encoding='utf-8') as f:
+            f.write(cls.to_json_string(l_o))
+        f.close()

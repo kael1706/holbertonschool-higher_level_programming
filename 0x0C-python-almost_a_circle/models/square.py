@@ -56,7 +56,6 @@ class Square(Rectangle):
         newd = {}
         new_k = ''
         if d:
-            print(d)
             for k in d:
                 new_k = k
                 if k.startswith('_'):
