@@ -47,7 +47,7 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """Return a list of the JSON string"""
+        """Return dictionary list"""
         if not json_string or json_string is None:
             return []
         if type(json_string) != str:
