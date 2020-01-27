@@ -8,6 +8,8 @@ import unittest
 from models.base import Base as B
 from models.rectangle import Rectangle as R
 from models.square import Square as S
+import sys
+from io import StringIO
 
 
 class t_Rectangle_class(unittest.TestCase):
@@ -46,7 +48,7 @@ class t_Rectangle_class(unittest.TestCase):
         r14 = R(6, 3)
         self.assertEqual(r14.id, 5)
 
-    def test_propertys(self):
+    def test_property_exceptions(self):
         """"checking propertys"""
         r15 = R(6, 3)
         self.assertEqual(r15.width, 6)
@@ -77,3 +79,70 @@ class t_Rectangle_class(unittest.TestCase):
                 R,
                 6, -3, 0, 0, 17
                 )
+
+        r17 = R(6, 3, 1, 2)
+        self.assertEqual(r17.x, 1)
+        self.assertRaisesRegex(
+                TypeError,
+                'x must be an integer',
+                R,
+                6, 3, 'k', 2, 17
+                )
+        self.assertRaisesRegex(
+                ValueError,
+                'x must be >= 0',
+                R,
+                6, 3, -1, 2, 17
+                )
+
+        r18 = R(6, 3, 1, 2)
+        self.assertEqual(r18.y, 2)
+        self.assertRaisesRegex(
+                TypeError,
+                'y must be an integer',
+                R,
+                6, 3, 1, 'k', 17
+                )
+        self.assertRaisesRegex(
+                ValueError,
+                'y must be >= 0',
+                R,
+                6, 3, 1, -2, 17
+            )
+
+    def test_area(self):
+        """check function area"""
+        r19 = R(6, 3)
+        self.assertEqual(r19.area(), 18)
+
+    def test_display(self):
+        """check display method"""
+        new_output = StringIO()
+        sys.stdout = new_output
+        r20 = R(3, 2)
+        r20.display()
+        sys.stdout = sys.__stdout__
+        assert new_output.getvalue() == "###\n###\n"
+
+    def test_str(self):
+        """check str method"""
+        new_output = StringIO()
+        sys.stdout = new_output
+        r21 = R(4, 6, 2, 1, 12)
+        print(r21)
+        sys.stdout = sys.__stdout__
+        assert new_output.getvalue() == "[Rectangle] (12) 2/1 - 4/6\n"
+
+    def test_update(self):
+        """check update method"""
+        new_output = StringIO()
+        sys.stdout = new_output
+        r22 = R(10, 10, 10, 10)
+        r22.update(89)
+        r22.update(89, 2)
+        r22.update(89, 2, 3)
+        r22.update(89, 2, 3, 4)
+        r22.update(89, 2, 3, 4, 5)
+        print(r22)
+        sys.stdout = sys.__stdout__
+        assert new_output.getvalue() == "[Rectangle] (89) 4/5 - 2/3\n"
