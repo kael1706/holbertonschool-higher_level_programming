@@ -13,7 +13,7 @@ def int_check(n, v):
     w = ['width', 'height', 'x', 'y']
     if type(v) != int:
         raise TypeError("{} must be an integer".format(n))
-    if (n == w[0] or n == [1]) and v <= 0:
+    if (n == w[0] or n == w[1]) and v <= 0:
         raise ValueError("{} must be > 0".format(n))
     if (n == w[2] or n == w[3]) and v < 0:
         raise ValueError("{} must be >= 0".format(n))
