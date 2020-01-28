@@ -12,7 +12,7 @@ import sys
 from io import StringIO
 
 
-class t_Rectangle_class(unittest.TestCase):
+class t_Saquare_class(unittest.TestCase):
     """Rectangle unit tests"""
 
     def test_id_input(self):
