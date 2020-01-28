@@ -9,6 +9,7 @@ from models.base import Base as B
 from models.rectangle import Rectangle as R
 from models.square import Square as S
 
+
 class t_Base_class(unittest.TestCase):
     """Base class unit test"""
 
@@ -37,11 +38,11 @@ class t_Base_class(unittest.TestCase):
 
         b6 = B()
         self.assertEqual(b6.id, 3)
-        
+
         b7 = B(5)
         b8 = B()
         self.assertEqual(b8.id, 4)
-        
+
         b9 = B()
         self.assertEqual(b9.id, 5)
 
@@ -52,8 +53,8 @@ class t_Base_class(unittest.TestCase):
         r1 = R(10, 7, 2, 8)
         dictionary = r1.to_dictionary()
         json_dictionary = B.to_json_string([dictionary])
-        self.assertCountEqual(dictionary, {'x': 2, 'width': 10, 'id': 1,
-                'height': 7, 'y': 8})
+        self.assertCountEqual(
+            dictionary, {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8})
         self.assertEqual(type(dictionary), dict)
         self.assertEqual(type(json_dictionary), str)
 
@@ -76,7 +77,7 @@ class t_Base_class(unittest.TestCase):
         s1 = S.create(**d1)
         self.assertEqual(s1.to_dictionary(), d1)
         self.assertEqual(B._Base__nb_objects, 1)
-        
+
         d2 = {'id': 5, 'width': 3, 'height': 7, 'x': 2, 'y': 1}
         r1 = R.create(**d2)
         self.assertEqual(r1.to_dictionary(), d2)
@@ -109,7 +110,7 @@ class t_Base_class(unittest.TestCase):
         l_o2 = S.load_from_file()
         self.assertIsInstance(l_o2[0], S)
         self.assertDictEqual(l_o2[0].to_dictionary(), d6)
-    
+
         R.save_to_file([r5, r5, r5])
         l_o3 = R.load_from_file()
         S.save_to_file([s6, s6, s6])

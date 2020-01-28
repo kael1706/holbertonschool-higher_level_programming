@@ -27,7 +27,7 @@ class t_Rectangle_class(unittest.TestCase):
 
         r8 = R(6, 3, 0, 0, -17)
         self.assertEqual(r8.id, -17)
-    
+
     def test_id_plusplus(self):
         """checking the increase of the id argument"""
         B._Base__nb_objects = 0
@@ -40,7 +40,7 @@ class t_Rectangle_class(unittest.TestCase):
 
         r11 = R(6, 3)
         self.assertEqual(r11.id, 3)
-        
+
         r12 = R(6, 3, 0, 0, 5)
         r13 = R(6, 3)
         self.assertEqual(r13.id, 4)
