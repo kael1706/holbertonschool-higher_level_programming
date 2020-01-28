@@ -10,11 +10,11 @@ from models.rectangle import Rectangle
 
 def int_check(n, v):
     """check if is a valid integer."""
-    w = ['size', 'x', 'y']
+    w = ['width', 'x', 'y']
     if type(v) != int:
         raise TypeError("{} must be an integer".format(n))
     if n == w[0] and v <= 0:
-        raise ValueError("width must be > 0".format(n))
+        raise ValueError("{} must be > 0".format(n))
     if (n == w[1] or n == w[2]) and v < 0:
         raise ValueError("{} must be >= 0".format(n))
 
@@ -73,6 +73,6 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """set size"""
-        int_check('size', value)
+        int_check('width', value)
         self.width = value
         self.height = value
