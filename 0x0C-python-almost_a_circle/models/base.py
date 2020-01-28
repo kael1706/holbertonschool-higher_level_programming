@@ -29,7 +29,7 @@ class Base():
         if type(list_dictionaries) != list:
             raise TypeError(e_msj)
         for item in list_dictionaries:
-            if isinstance(item, dict) == False:
+            if isinstance(item, dict) is False:
                 raise TypeError(e_msj)
         return json.dumps(list_dictionaries)
 

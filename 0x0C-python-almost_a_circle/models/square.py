@@ -7,6 +7,7 @@ Square.
 
 from models.rectangle import Rectangle
 
+
 def int_check(n, v):
     """check if is a valid integer."""
     w = ['size', 'x', 'y']
@@ -16,7 +17,6 @@ def int_check(n, v):
         raise ValueError("{} must be > 0".format(n))
     if (n == w[1] or n == w[2]) and v < 0:
         raise ValueError("{} must be >= 0".format(n))
-
 
 
 class Square(Rectangle):
@@ -64,7 +64,7 @@ class Square(Rectangle):
                     new_k = 'size'
                 newd[new_k] = d[k]
             return newd
-    
+
     @property
     def size(self):
         """get size."""
@@ -72,7 +72,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """set size""" 
+        """set size"""
         int_check('size', value)
         self.width = value
         self.height = value
