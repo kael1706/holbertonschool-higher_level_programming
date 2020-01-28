@@ -14,7 +14,7 @@ def int_check(n, v):
     if type(v) != int:
         raise TypeError("{} must be an integer".format(n))
     if n == w[0] and v <= 0:
-        raise ValueError("{} must be > 0".format(n))
+        raise ValueError("width must be > 0".format(n))
     if (n == w[1] or n == w[2]) and v < 0:
         raise ValueError("{} must be >= 0".format(n))
 
