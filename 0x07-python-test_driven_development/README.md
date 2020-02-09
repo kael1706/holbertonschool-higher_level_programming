@@ -1,6 +1,13 @@
 # 0x07. Python - Test-driven development
 
-## Description
+## Resources:books:
+Read or watch:
+* [doctest — Test interactive Python examples](https://intranet.hbtn.io/rltoken/alaT1C9CeCbkRKh-yjMRww)
+* [doctest – Testing through documentation](https://intranet.hbtn.io/rltoken/cpEYbv_Z55QrSVRiuG5tUw)
+* [Unit Tests in Python](https://intranet.hbtn.io/rltoken/CELicn3K8hODQsWZak_h0g)
+
+---
+## Learning Objectives:bulb:
 What you should learn from this project:
 
 * Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
@@ -35,6 +42,19 @@ What you should learn from this project:
 
 ### [5. Max integer - Unittest](./tests/6-max_integer_test.py)
 * Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.
+
+
+### [6. Matrix multiplication](./100-matrix_mul.py)
+* Write a function that multiplies 2 matrices:
+
+
+### [7. Lazy matrix multiplication](./101-lazy_matrix_mul.py)
+* Write a function that multiplies 2 matrices by using the module NumPy
+
+
+### [8. CPython #3: Python Strings](./102-python.c)
+* 
+
 
 ---
 

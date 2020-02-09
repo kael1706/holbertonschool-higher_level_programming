@@ -1,6 +1,14 @@
 # 0x0A. Python - Inheritance
 
-## Description
+## Resources:books:
+Read or watch:
+* [Inheritance](https://intranet.hbtn.io/rltoken/E2Bs3bxX8GuSEKuWqswU7g)
+* [Multiple inheritance](https://intranet.hbtn.io/rltoken/auwnZOKkBZ97JaLtrMryuA)
+* [Inheritance in Python](https://intranet.hbtn.io/rltoken/ycewwwPmDpXqRp2R1FW51w)
+* [Learn to Program 10 : Inheritance Magic Methods](https://intranet.hbtn.io/rltoken/F8LUzmvPI4yur1Z37ZM1fQ)
+
+---
+## Learning Objectives:bulb:
 What you should learn from this project:
 
 * Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
@@ -66,6 +74,14 @@ What you should learn from this project:
 ### [11. Square #2](./11-square.py)
 * Write a class Square that inherits from Rectangle (9-rectangle.py).
 (task based on 10-square.py).
+
+
+### [12. My integer](./100-my_int.py)
+* Write a class MyInt that inherits from int:
+
+
+### [13. Can I?](./101-add_attribute.py)
+* Write a function that adds a new attribute to an object if it’s possible:
 
 ---
 

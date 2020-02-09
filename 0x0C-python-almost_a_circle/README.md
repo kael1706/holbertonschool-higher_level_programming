@@ -1,6 +1,14 @@
 # 0x0C. Python - Almost a circle
 
-## Description
+## Resources:books:
+Read or watch:
+* [args/kwargs](https://intranet.hbtn.io/rltoken/SON4gFe6PsxruKOjLYGfig)
+* [JSON encoder and decoder](https://intranet.hbtn.io/rltoken/TY4rfu2AZtXlRmPVNZm1Lw)
+* [unittest module](https://intranet.hbtn.io/rltoken/T7uxwxtGdbRRW9pkD4eO0g)
+* [Python test cheatsheet](https://intranet.hbtn.io/rltoken/SfEo3RQeAXXYI9yabFRw3g)
+
+---
+## Learning Objectives:bulb:
 What you should learn from this project:
 
 * What is Unit testing and how to implement it in a large project
@@ -90,6 +98,14 @@ What you should learn from this project:
 
 ### [19. File to instances](./models/base.py)
 * Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:
+
+
+### [20. JSON ok, but CSV?](./models/)
+* Update the class Base by adding the class methods def save_to_file_csv(cls, list_objs): and def load_from_file_csv(cls): that serializes and deserializes in CSV:
+
+
+### [21. Let's draw it](./models/base.py)
+* Update the class Base by adding the static method def draw(list_rectangles, list_squares): that opens a window and draws all the Rectangles and Squares:
 
 ---
 
