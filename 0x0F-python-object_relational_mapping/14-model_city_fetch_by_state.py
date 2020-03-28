@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# print the first State object from the database hbtn_0e_6_usa
+# prints all City objects with their states
 
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -12,16 +13,16 @@ if __name__ == '__main__':
     p = sys.argv[2]
     mydb = sys.argv[3]
 
-    query_c = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(
-        query_c.format(u, p, mydb),
+        'mysql+mysqldb://{}:{}@localhost:3306/{}'.
+        format(u, p, mydb),
         pool_pre_ping=True
     )
-
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     s = Session()
 
-    row = s.query(State).first()
-    print('1: ' + row.name if row else 'Nothing')
+    for state, city in s.query(State, City).\
+            filter(State.id == City.state_id):
+        print('{}: ({}) {}'.format(state.name, city.id, city.name))
     s.close()
