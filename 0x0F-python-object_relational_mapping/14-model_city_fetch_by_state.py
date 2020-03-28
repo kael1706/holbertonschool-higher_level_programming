@@ -13,9 +13,9 @@ if __name__ == '__main__':
     p = sys.argv[2]
     mydb = sys.argv[3]
 
+    query_c = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost:3306/{}'.
-        format(u, p, mydb),
+        query_c.format(u, p, mydb),
         pool_pre_ping=True
     )
     Base.metadata.create_all(engine)

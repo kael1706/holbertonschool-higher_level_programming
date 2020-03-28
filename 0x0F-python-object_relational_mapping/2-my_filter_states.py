@@ -22,8 +22,10 @@ if __name__ == '__main__':
     )
 
     c = db.cursor()
-    query = ("SELECT * FROM states WHERE BINARY "
-            "name='{}' ORDER BY 'states.id' ASC;")
+    query = (
+            "SELECT * FROM states WHERE BINARY "
+            "name='{}' ORDER BY 'states.id' ASC;"
+            )
     c.execute(query.format(name))
     records = c.fetchall()
 
