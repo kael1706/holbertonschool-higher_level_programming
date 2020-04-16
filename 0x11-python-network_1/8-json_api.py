@@ -14,7 +14,7 @@ from sys import argv
 if __name__ == '__main__':
     d = {'q': ""}
     if len(argv) > 1:
-        data['q'] = argv[1]
+        d['q'] = argv[1]
     rps = requests.post(
                        "http://0.0.0.0:5000/search_user",
                        d
